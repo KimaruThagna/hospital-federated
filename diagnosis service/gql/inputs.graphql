@@ -1,0 +1,17 @@
+input diagnosisCreationInput {
+    diagnosis: String!
+    visiting_patient: String
+    consulting_doctor: String
+}
+
+input diagnosisUpdateInput {
+    uid: ID!
+    diagnosis: String!
+}
+
+input diagnosisFilterInput {
+    uid: ID!
+    diagnosis__contains: String!
+}
+
+input paginationInput {first: Int after: String last: Int before: String}

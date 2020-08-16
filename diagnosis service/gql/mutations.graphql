@@ -1,0 +1,9 @@
+type Mutation {
+
+    createDiagnosis(creation_input: diagnosisCreationInput!): SingleObjectPayload!
+    updateDiagnosis(update_input: diagnosisUpdateInput!): SingleObjectPayload!
+    deleteDiagnosis(uid:ID!): StatusPayload!
+    archiveDiagnosis(uid:ID!): StatusPayload!
+    unarchiveDiagnosis(uid:ID!): StatusPayload!
+
+}

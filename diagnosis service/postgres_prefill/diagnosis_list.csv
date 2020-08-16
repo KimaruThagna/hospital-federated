@@ -1,0 +1,6 @@
+diagnosis,visiting_patient,consulting_doctor
+Patient seems to have developed symptoms similar to Cholera,{"patient_number":"74859"},{"license_number":"02587"}
+Patient seems to have developed symptoms similar to Typhoid,{"patient_number":"00100"},{"license_number":"12456"}
+Patient seems to have no severe symptoms,{"patient_number":"12369"},{"license_number":"749411"}
+Patient seems to have developed symptoms similar to Pneumonia,{"patient_number":"85945"},{"license_number":"00369"}
+Patient seems to have fully recovered,{"patient_number":"02577"},{"license_number":"012589"}
