@@ -1,7 +1,8 @@
 ## Apollo Gateway Service Micro Django
 Finale of a journey through building a django-graphql based micro service.
 The repo also explores using [ariadne](https://ariadnegraphql.org/) to build a federated schema.
-This is part of a micro service architecture where this handles the patient's service. Other services in this project are the `Patients` and `diagnosis` services.
+This is part of a micro service architecture where 
+this handles the federation using an **Apollo** gateway service.
 ## Tech stack
 1. [Django](https://www.djangoproject.com/) for backend and business logic
 2. [Ariadne](https://ariadnegraphql.org/) to resolve python/django objects to graphql API
@@ -12,7 +13,7 @@ This is part of a micro service architecture where this handles the patient's se
 6. [Apollo federation](https://www.apollographql.com/docs/apollo-server/federation/introduction/) To generate a unified data graph from the federated schemas
  
 ## Overall Architecture.
-**Micro-django 3** is modelled as a diagnosis service app. The whole architecture involves 3 micro services
+
 1. [Doctors service](https://github.com/KimaruThagna/micro-django) part 1
 2. [Patient's service](https://github.com/KimaruThagna/patient-microservice) part 2
 3. [Diagnosis service](https://github.com/KimaruThagna/diagnosis-microservice) part 3
