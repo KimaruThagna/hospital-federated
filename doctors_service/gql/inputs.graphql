@@ -1,0 +1,30 @@
+input doctorCreationInput {
+    first_name: String!
+    last_name: String!
+    license_number: String!
+    specialization: String!
+    county: String!
+}
+
+input doctorUpdateInput {
+    uid: ID!
+    first_name: String
+    last_name: String
+    license_number: String
+    specialization: String
+    county: String
+}
+
+input doctorFilterInput {
+    last_name__contains: String
+    first_name__contains: String
+    license_number: String
+    specialization__contains: String
+    county__contains: String
+    is_deleted: Boolean
+    is_active: Boolean
+    created_at__lte: DateTime
+    created_at__gte: DateTime
+}
+
+input paginationInput {first: Int after: String last: Int before: String}

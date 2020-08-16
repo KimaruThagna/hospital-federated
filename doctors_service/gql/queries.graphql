@@ -1,0 +1,7 @@
+
+type Query {
+
+    doctor(uid: String!): SingleObjectPayload!
+    doctors(filter_input: doctorFilterInput): MultipleObjectsPayload!
+
+}
