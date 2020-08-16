@@ -13,9 +13,9 @@
   "devDependencies": {},
   "scripts": {
     "start-gateway": "nodemon gateway.js",
-    "start-service-doctors": "nodemon microservices/service_users.py",
-    "start-service-diagnosis": "nodemon microservices/service_reviews.py",
-    "start-service-patients": "nodemon microservices/service_products.py",
+    "start-service-doctors": "nodemon doctors_service/docker-compose up",
+    "start-service-diagnosis": "nodemon diagnosis_service/docker-compose up",
+    "start-service-patients": "nodemon patients_service/docker-compose up",
     "start-services": "concurrently \"npm:start-service-*\""
   }
 }
