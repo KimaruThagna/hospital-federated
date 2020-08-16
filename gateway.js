@@ -3,9 +3,9 @@ const { ApolloGateway } = require("@apollo/gateway");
 
 const gateway = new ApolloGateway({
   serviceList: [
-    { name: 'doctors', url: 'http://localhost:5001' },
-    { name: 'diagnosis', url: 'http://localhost:5002' },
-    { name: 'patients', url: 'http://localhost:5003' },
+    { name: 'doctors', url: 'http://localhost:1337' },
+    { name: 'diagnosis', url: 'http://localhost:1339' },
+    { name: 'patients', url: 'http://localhost:1338' },
   ],
 });
 

@@ -19,3 +19,28 @@ this handles the federation using an **Apollo** gateway service.
 3. [Diagnosis service](https://github.com/KimaruThagna/diagnosis-microservice) part 3
 
 ## Installation and running
+
+
+Now, we can run all of the microservices at once using the following command:
+
+```bash
+npm run start-services
+```
+
+The last thing is to run the gateway. Open a new terminal window and use:
+
+```bash
+npm run start-gateway
+```
+Gateway will be available at http://localhost:4000
+
+
+
+## Example queries
+
+Now we can execute GraphQL operations as if it were implemented as a monolithic service:
+
+
+```graphql
+
+```

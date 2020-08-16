@@ -1,0 +1,21 @@
+{
+  "name": "hospital-federated-ariadne",
+  "version": "1.0.0",
+  "description": "A mock hospital service that demonstrates dockerized django apps running as federated services using ariadne and apollo",
+  "main": "gateway.js",
+  "dependencies": {
+    "@apollo/gateway": "^0.11.7",
+    "apollo-server": "^2.9.16",
+    "concurrently": "^5.1.0",
+    "graphql": "^14.6.0",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start-gateway": "nodemon gateway.js",
+    "start-service-doctors": "nodemon microservices/service_users.py",
+    "start-service-diagnosis": "nodemon microservices/service_reviews.py",
+    "start-service-patients": "nodemon microservices/service_products.py",
+    "start-services": "concurrently \"npm:start-service-*\""
+  }
+}
