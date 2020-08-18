@@ -1,17 +1,28 @@
 input diagnosisCreationInput {
     diagnosis: String!
-    visiting_patient: String
-    consulting_doctor: String
+    visiting_patient: Patient_input
+    consulting_doctor: Doctor_input
 }
 
 input diagnosisUpdateInput {
     uid: ID!
     diagnosis: String!
+    visiting_patient: Patient_input
+    consulting_doctor: Doctor_input
 }
 
 input diagnosisFilterInput {
     uid: ID!
     diagnosis__contains: String!
+}
+input Doctor_input
+{
+    license_number: String
+}
+
+input Patient_input
+{
+    patient_number: String
 }
 
 input paginationInput {first: Int after: String last: Int before: String}

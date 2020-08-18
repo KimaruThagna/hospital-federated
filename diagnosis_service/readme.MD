@@ -37,4 +37,87 @@ To view the app from the admin side, access the admin via the url [http://0.0.0.
 
 ## Sample Query
 
+-`single record`
+
+```graphql
+{
+  diagnosis_note(uid:"1ea4bed2-e34b-4e0e-b5a5-bdcd222cd061")
+  {
+    status
+    object
+    {
+      uid
+      diagnosis
+      consulting_doctor{license_number}
+      visiting_patient{patient_number}
+    }
+  }
+}
+```
+
+-`multiple_records`
+
+```graphql
+{
+  diagnosis_notes
+  {
+    status
+    object
+    {
+      uid
+      diagnosis
+      consulting_doctor{license_number}
+      visiting_patient{patient_number}
+    }
+  }
+}
+```
 ## Sample Mutation
+- `createDiagnosis`
+```graphql
+mutation{
+  createDiagnosis(creation_input:
+  {    
+    diagnosis:"Patient seems to be exhibiting yellow coloration. Jaundice detected"
+    visiting_patient:{patient_number:"000000"}
+    consulting_doctor:{license_number:"111111"}
+  })
+  {
+    status
+    object
+  {
+    diagnosis
+  }
+  }
+}
+```
+
+-`updateDiagnosis`
+```graphql
+mutation{
+  updateDiagnosis(creation_input:
+  {
+    uid:"aebada07-2633-4952-9786-9648638745b4"
+    diagnosis:"Patient seems to be exhibiting yellow coloration. Jaundice detected"
+    visiting_patient:{patient_number:"000000"}
+    consulting_doctor:{license_number:"111111"}
+  })
+  {
+    status
+    object
+  {
+    diagnosis
+  }
+  }
+}
+```
+-`archive_diagnosis`
+```graphql
+mutation{
+ archiveDiagnosis(uid:"1ea4bed2-e34b-4e0e-b5a5-bdcd222cd061")
+  {
+    status
+  
+  }
+}
+```
