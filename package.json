@@ -14,7 +14,7 @@
   "scripts": {
     "start-gateway": "nodemon gateway.js",
     "start-service-doctors": "nodemon doctors_service/docker-compose up",
-    "start-service-diagnosis": "nodemon diagnosis_service/docker-compose up",
+    "start-service-diagnosis": "nodemon diagnosis_microservice/docker-compose up",
     "start-service-patients": "nodemon patients_service/docker-compose up",
     "start-services": "concurrently \"npm:start-service-*\""
   }
