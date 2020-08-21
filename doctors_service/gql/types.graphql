@@ -1,6 +1,6 @@
 scalar DateTime
 
-
+union object = Diagnosis | Patient | Doctor
 type Doctor @key(fields: "license_number")
 {
     uid: ID!
