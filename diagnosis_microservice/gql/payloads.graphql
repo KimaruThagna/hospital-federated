@@ -1,14 +1,14 @@
-type SingleObjectPayload {
+type SingleDiagnosisPayload {
     status: Boolean!
     error: String
-    object: object!
+    object: Diagnosis!
 }
 
 
-type MultipleObjectsPayload {
+type MultipleDiagnosisPayload {
     status: Boolean!
     error: String
-    object: [object!]
+    object: [Diagnosis]!
 }
 
 type StatusPayload {

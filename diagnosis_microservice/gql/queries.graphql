@@ -1,7 +1,7 @@
 
 type Query {
 
-    diagnosis_note(uid: String!): SingleObjectPayload!
-    diagnosis_notes(filter_input: diagnosisFilterInput): MultipleObjectsPayload!
+    diagnosis_note(uid: String!): SingleDiagnosisPayload!
+    diagnosis_notes(filter_input: diagnosisFilterInput): MultipleDiagnosisPayload!
 
 }

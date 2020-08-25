@@ -1,7 +1,7 @@
 type Mutation {
 
-    createPatient(creation_input: patientCreationInput!): SingleObjectPayload!
-    updatePatient(update_input: patientUpdateInput!): SingleObjectPayload!
+    createPatient(creation_input: patientCreationInput!): SinglePatientPayload!
+    updatePatient(update_input: patientUpdateInput!): SinglePatientPayload!
     deletePatient(uid:ID!): StatusPayload!
     activatePatient(uid:ID!): StatusPayload!
     deactivatePatient(uid:ID!): StatusPayload!

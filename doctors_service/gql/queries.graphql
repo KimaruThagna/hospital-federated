@@ -1,7 +1,7 @@
 
 type Query {
 
-    doctor(uid: String!): SingleObjectPayload!
-    doctors(filter_input: doctorFilterInput): MultipleObjectsPayload!
+    doctor(uid: String!): SingleDoctorPayload!
+    doctors(filter_input: doctorFilterInput): MultipleDoctorsPayload!
 
 }

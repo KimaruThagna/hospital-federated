@@ -1,7 +1,7 @@
 scalar DateTime
 
-union object = Diagnosis | Patient | Doctor
-type Diagnosis
+
+type Diagnosis @key(fields: "uid")
 {
     uid: ID!
     diagnosis: String!
@@ -16,9 +16,12 @@ type Diagnosis
 type Patient @key(fields: "patient_number") @extends {
     patient_number: String! @external
     diagnosis: [Diagnosis]
+
+
 }
 
 type Doctor @key(fields: "license_number") @extends {
     license_number: String! @external
     diagnosis: [Diagnosis]
+
 }

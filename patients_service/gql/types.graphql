@@ -1,6 +1,5 @@
 scalar DateTime
 
-union object = Diagnosis | Patient | Doctor
 
 type Patient @key(fields: "patient_number")
 {
@@ -16,3 +15,4 @@ type Patient @key(fields: "patient_number")
     deleted_at: DateTime
 
 }
+
