@@ -26,19 +26,19 @@ def resolve_diagnosis(obj, *_):
 
 @diagnosis_federated_object.field("consulting_doctor")
 def resolve_consulting_doctor(obj, *_):
-    return {"license_number": obj["doctor"]["license_number"]}
+    return {"license_number": obj["consulting_doctor"]["license_number"]}
 
 @diagnosis_federated_object.field("visiting_patient")
 def resolve_visiting_patient(obj, *_):
-    return {"patient_number": obj["patient"]["patient_number"]}
+    return {"patient_number": obj["visiting_patient"]["patient_number"]}
 
-@doctor_federated_object.field("diaosis")
+@doctor_federated_object.field("diagnosis")
 def resolve_doctor_diagnosis(obj, *_):
-    return Diagnosis.objects.filter(consulting_doctor__license_number=obj["doctor"]["license_number"])
+    return Diagnosis.objects.filter(consulting_doctor__license_number=obj["consulting_doctor"]["license_number"])
 
 @patient_federated_object.field("diagnosis")
 def resolve_patient_diagnosis(obj, *_):
-    return Diagnosis.objects.filter(visiting_patient__patient_number=obj["patient"]["patient_number"])
+    return Diagnosis.objects.filter(visiting_patient__patient_number=obj["visiting_patient"]["patient_number"])
 
 
 #https://stackoverflow.com/questions/35133299/launch-a-shell-script-from-lambda-in-aws
