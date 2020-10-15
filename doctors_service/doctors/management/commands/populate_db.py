@@ -13,9 +13,7 @@ def prefill_doctors(filename):
         for record in reader:
             try:
                 try:
-                    _ = Doctor.objects.get(
-                        license_number=record["license_number"]
-                    )
+                    _ = Doctor.objects.get(license_number=record["license_number"])
                 except Doctor.DoesNotExist:
                     with transaction.atomic():
                         Doctor.objects.create(**record)

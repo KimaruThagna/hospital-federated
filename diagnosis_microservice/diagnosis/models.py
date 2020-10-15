@@ -1,7 +1,9 @@
-from django.db import models
 from django.contrib.postgres.fields import JSONField
+from django.db import models
 from utils.base_models import BaseModel
+
 # Create your models here.
+
 
 class Diagnosis(BaseModel):
     diagnosis = models.TextField(max_length=2000)
