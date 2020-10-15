@@ -1,9 +1,10 @@
-from ariadne import MutationType, QueryType, gql, load_schema_from_path
-from ariadne.contrib.federation import make_federated_schema
 from os.path import dirname, join
 
+from ariadne import MutationType, QueryType, gql, load_schema_from_path
+from ariadne.contrib.federation import make_federated_schema
 from doctors.resolvers.mutations.doctors import *
 from doctors.resolvers.queries.doctors import *
+
 
 def load_typedef_from_schema():
     type_def = load_schema_from_path(join(dirname(dirname(__file__)), "./gql"))
@@ -17,6 +18,7 @@ def bind_query_type_to_resolvers():
     query.set_field("doctor", DoctorsQueries.get_doctor)
     query.set_field("doctors", DoctorsQueries.get_doctors)
     return query
+
 
 def bind_mutation_type_to_resolvers():
     mutation = MutationType()
