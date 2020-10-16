@@ -44,3 +44,11 @@ def resolve_patient_diagnosis(obj, *_):
 #https://stackoverflow.com/questions/35133299/launch-a-shell-script-from-lambda-in-aws
 #https://stackoverflow.com/questions/60566124/execute-python-script-on-ec2-instance-via-aws-lambda
 #https://aws.amazon.com/blogs/machine-learning/call-an-amazon-sagemaker-model-endpoint-using-amazon-api-gateway-and-aws-lambda/
+#https://github.com/skipdev/Python-Booking-System
+#https://github.com/mdave/pyappointment
+#https://www.freecodecamp.org/news/introducing-timeboard-a-python-business-calendar-package-a2335898c697/
+#https://pypi.org/project/django-diary/
+#https://github.com/saroarjahan/Django-appointment-and-booking-system
+#https://forum.djangoproject.com/t/making-a-recurrent-appointment-scheduling-software-with-django-and-python/2547
+#https://steelkiwi.com/projects/a-system-for-medical-appointment-scheduling/
+#https://teamtreehouse.com/community/how-to-model-a-planning-appointment-for-doctors-in-django
