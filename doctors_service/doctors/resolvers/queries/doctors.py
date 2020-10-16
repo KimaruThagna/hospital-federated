@@ -1,7 +1,6 @@
 from typing import Any, Dict, Optional
 
 from ariadne import convert_kwargs_to_snake_case
-from django.db import transaction
 from doctors.models import Doctor
 
 
@@ -17,12 +16,8 @@ class DoctorsQueries:
     @staticmethod
     @convert_kwargs_to_snake_case
     def get_doctor(_, info, uid):
-
         try:
-            with transaction.atomic():
-                return dict(
-                    status=True, object=Doctor.objects.filter(uid=uid).not_deleted()[0]
-                )
+            return dict(status=True, object=Doctor.objects.get(uid=uid))
         except Exception as e:
             return dict(status=False, error=f"An error as occurred {e}")
 

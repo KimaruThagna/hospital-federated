@@ -1,13 +1,12 @@
 from ariadne.contrib.federation import FederatedObjectType
-
-from patients_service.patient.models import Patient
+from patient.models import Patient
 
 patient_federated_object = FederatedObjectType("Patient")
 
 
 @patient_federated_object.reference_resolver
 def get_patient_by_uid(_, _info, representation):
-    return Patient.objects.get(patient_number=representation.get("patient_number"))
+    return Patient.objects.get(uid=representation.get("uid"))
 
 
 @patient_federated_object.field("uid")

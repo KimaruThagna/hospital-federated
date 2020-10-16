@@ -22,7 +22,7 @@ class DiagnosisQueries:
             with transaction.atomic():
                 return dict(
                     status=True,
-                    object=Diagnosis.objects.filter(uid=uid).not_deleted()[0],
+                    object=Diagnosis.objects.get(uid=uid),
                 )
         except Exception as e:
             return dict(status=False, error=f"An error as occurred {e}")

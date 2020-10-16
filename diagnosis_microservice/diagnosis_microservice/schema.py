@@ -2,6 +2,9 @@ from os.path import dirname, join
 
 from ariadne import MutationType, QueryType, gql, load_schema_from_path
 from ariadne.contrib.federation import make_federated_schema
+from diagnosis.resolvers.federation.diagnosis import diagnosis_federated_object
+from diagnosis.resolvers.federation.doctor import doctor_federated_type
+from diagnosis.resolvers.federation.patient import patient_federated_type
 from diagnosis.resolvers.mutations.diagnosis import *
 from diagnosis.resolvers.queries.diagnosis import *
 
@@ -35,7 +38,16 @@ def generate_schema():
     type_defs = load_typedef_from_schema()
     query = bind_query_type_to_resolvers()
     mutation = bind_mutation_type_to_resolvers()
-    schema = make_federated_schema(type_defs, [query, mutation])
+    schema = make_federated_schema(
+        type_defs,
+        [
+            query,
+            mutation,
+            patient_federated_type,
+            doctor_federated_type,
+            diagnosis_federated_object,
+        ],
+    )
     return schema
 
 

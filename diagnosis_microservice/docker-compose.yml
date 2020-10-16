@@ -18,7 +18,7 @@ services:
                     python manage.py populate_db &&
                     gunicorn diagnosis_microservice.wsgi:application --bind 0.0.0.0:${APP_PORT}"
     volumes:
-      - .:/microservice:rw # map data and files from parent directory in host to microservice directory in docker containe
+      - .:/microservice # map data and files from parent directory in host to microservice directory in docker containe
       - static_volume:/home/app/microservice/static
     env_file:
       - .env
