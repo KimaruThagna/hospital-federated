@@ -29,6 +29,7 @@ class BaseManager(models.Manager):
         """
         return BaseQueryset(self.model)
 
+
 class BaseModel(models.Model):
 
     objects = BaseManager()
@@ -41,7 +42,6 @@ class BaseModel(models.Model):
     is_deleted = models.BooleanField(default=False)
     deleted_at = models.DateTimeField(null=True)
     is_active = models.BooleanField(default=True)
-
 
     class Meta:
         abstract = True
@@ -59,4 +59,3 @@ class BaseModel(models.Model):
     def deactivate(self):
         self.is_active = False
         self.save()
-

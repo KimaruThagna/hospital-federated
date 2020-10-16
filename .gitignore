@@ -106,6 +106,9 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+diagnosis_microservice/.env
+doctors_service/.env
+patients_service/.env
 .env
 .venv
 env/

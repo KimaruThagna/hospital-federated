@@ -1,18 +1,18 @@
 scalar DateTime
 
 
-
-type Doctor @key(fields: "license_number")
+type Doctor @key(fields: "uid")
 {
-    uid: ID!
-    first_name: String!
-    last_name: String!
-    license_number: String!
-    specialization: String!
-    county: String!
+    uid: ID
+    indexingId: String
+    first_name: String
+    last_name: String
+    license_number: String
+    specialization: String
+    county: String
     created_at: DateTime
-    is_deleted: Boolean!
-    is_active: Boolean!
+    is_deleted: Boolean
+    is_active: Boolean
     deleted_at: DateTime
 
 }

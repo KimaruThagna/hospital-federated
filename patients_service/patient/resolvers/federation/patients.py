@@ -1,12 +1,12 @@
 from ariadne.contrib.federation import FederatedObjectType
-from patients_service.patient.models import Patient
+from patient.models import Patient
 
 patient_federated_object = FederatedObjectType("Patient")
 
 
 @patient_federated_object.reference_resolver
-def get_patient_by_uid(_,_info,representation):
-    return Patient.objects.get(patient_number=representation.get("patient_number"))
+def get_patient_by_uid(_, _info, representation):
+    return Patient.objects.get(uid=representation.get("uid"))
 
 
 @patient_federated_object.field("uid")
@@ -23,13 +23,16 @@ def resolve_indexing_id(obj, *_):
 def resolve_first_name(obj, *_):
     return obj.first_name
 
+
 @patient_federated_object.field("last_name")
 def resolve_last_name(obj, *_):
     return obj.last_name
 
+
 @patient_federated_object.field("patient_number")
 def resolve_patient_number(obj, *_):
     return obj.patient_number
+
 
 @patient_federated_object.field("county")
 def resolve_county(obj, *_):
