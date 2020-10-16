@@ -1,17 +1,17 @@
 scalar DateTime
 
 
-type Patient @key(fields: "patient_number")
+type Patient @key(fields: "uid")
 {
-    uid: ID!
-    id: ID!
-    first_name: String!
-    last_name: String!
-    patient_number: String!
-    county: String!
+    uid: ID
+    indexingId: String
+    first_name: String
+    last_name: String
+    patient_number: String
+    county: String
     created_at: DateTime
-    is_deleted: Boolean!
-    is_active: Boolean!
+    is_deleted: Boolean
+    is_active: Boolean
     deleted_at: DateTime
 
 }
