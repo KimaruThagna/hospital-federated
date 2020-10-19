@@ -1,5 +1,5 @@
 from ariadne.contrib.federation import FederatedObjectType
-from doctors_service.doctors.models import Doctor
+from doctors.models import Doctor
 
 doctor_federated_object = FederatedObjectType("Doctor")
 

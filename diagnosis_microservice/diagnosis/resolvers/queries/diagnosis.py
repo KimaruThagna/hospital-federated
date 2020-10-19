@@ -1,7 +1,7 @@
 from typing import Any, Dict, Optional
 
 from ariadne import convert_kwargs_to_snake_case
-from diagnosis_microservice.diagnosis.models import Diagnosis
+from diagnosis.models import Diagnosis
 from django.db import transaction
 
 

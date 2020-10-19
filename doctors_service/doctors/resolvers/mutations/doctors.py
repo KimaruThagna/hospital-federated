@@ -1,6 +1,6 @@
 from ariadne import convert_kwargs_to_snake_case
 from django.db import transaction
-from doctors_service.doctors.models import Doctor
+from doctors.models import Doctor
 
 
 class DoctorsMutations:

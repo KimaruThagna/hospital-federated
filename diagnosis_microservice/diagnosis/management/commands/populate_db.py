@@ -2,7 +2,7 @@ import csv
 import json
 from os.path import join
 
-from diagnosis_microservice.diagnosis.models import Diagnosis
+from diagnosis.models import Diagnosis
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from django.db import IntegrityError, transaction

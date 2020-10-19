@@ -1,7 +1,7 @@
 from typing import Any, Dict, Optional
 
 from ariadne import convert_kwargs_to_snake_case
-from doctors_service.doctors.models import Doctor
+from doctors.models import Doctor
 
 
 class DoctorsQueries:

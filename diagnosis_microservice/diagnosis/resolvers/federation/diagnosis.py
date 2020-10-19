@@ -1,5 +1,5 @@
 from ariadne.contrib.federation import FederatedObjectType
-from diagnosis_microservice.diagnosis.models import Diagnosis
+from diagnosis.models import Diagnosis
 
 diagnosis_federated_object = FederatedObjectType("Diagnosis")
 

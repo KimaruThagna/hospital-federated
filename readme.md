@@ -20,14 +20,14 @@ this handles the federation using an **Apollo** gateway service.
 
 ## Installation and running
 
-
-Now, we can run all of the microservices at once using the following command:
+For federation to work, all 3 services should be up and running.
+Access and run all the 3 services' `docker-compose.yml` files in different terminals using the command
 
 ```bash
-npm run start-services
+docker-compose up --build
 ```
-
-The last thing is to run the gateway. Open a new terminal window and use:
+Once all 3 services are up and running on their specific and defined ports, 
+the last thing is to run the gateway. Open a new terminal window and use:
 
 ```bash
 npm run start-gateway
