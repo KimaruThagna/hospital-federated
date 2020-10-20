@@ -1,6 +1,6 @@
 diagnosis,visiting_patient,consulting_doctor
-Patient seems to have developed symptoms similar to Cholera,{"patient_number":"74859"},{"license_number":"02587"}
-Patient seems to have developed symptoms similar to Typhoid,{"patient_number":"00100"},{"license_number":"12456"}
-Patient seems to have no severe symptoms,{"patient_number":"12369"},{"license_number":"749411"}
-Patient seems to have developed symptoms similar to Pneumonia,{"patient_number":"85945"},{"license_number":"00369"}
-Patient seems to have fully recovered,{"patient_number":"02577"},{"license_number":"012589"}
+Patient seems to have developed symptoms similar to Cholera,1b2ae7e0-9857-4f5f-82c3-22855200b7b7,d9db7824-d117-4133-b1a9-d996ecda26ab
+Patient seems to have developed symptoms similar to Typhoid,68cc46d2-9583-4eaf-9ba3-4e5f09f8bc3f,946af466-d5ff-469a-9a99-0da4197494fe
+Patient seems to have no severe symptoms,6a1d0cbf-a170-4d1e-be1b-b6545250d955,7b9b9dec-be85-42e1-a3fc-bd5b4a29c1d9
+Patient seems to have developed symptoms similar to Pneumonia,4cac34b9-34bb-4af4-8e6a-8247f484e81d,1b1e0801-8c29-4b32-af3f-1a3d432ce594
+Patient seems to have fully recovered,76d17206-f5f4-4d61-b617-6828f474f834,98c73389-3301-4435-a8a0-c7f34e305288

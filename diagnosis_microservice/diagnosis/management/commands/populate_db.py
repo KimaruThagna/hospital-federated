@@ -12,8 +12,8 @@ def prefill_diagnosis(filename):
     with open(filename, newline="") as csv_file:
         reader = csv.DictReader(csv_file)
         for record in reader:
-            record["visiting_patient"] = json.loads(record["visiting_patient"])
-            record["consulting_doctor"] = json.loads(record["consulting_doctor"])
+#            record["visiting_patient"] = json.loads(record["visiting_patient"])
+#            record["consulting_doctor"] = json.loads(record["consulting_doctor"])
             try:
                 with transaction.atomic():
                     Diagnosis.objects.create(**record)
