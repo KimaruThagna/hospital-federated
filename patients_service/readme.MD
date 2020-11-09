@@ -72,12 +72,15 @@ To view the app from the admin side, access the admin via the url [http://0.0.0.
 ```
 mutation
 {
-createPatient{
+ createPatient(creation_input:
+{
 first_name:"John"
 last_name:"Doe"
 patient_number:"001265789" 
 county:"Lamu"
 }
+)
+{
 status
 object
 {
@@ -86,6 +89,9 @@ last_name
 first_name
 county
 }
+
+}
+
 }
 
 
